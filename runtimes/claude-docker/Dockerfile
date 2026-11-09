@@ -3,7 +3,7 @@
 # (github.com/schubergphilis/claude-docker): pinned + scanned base, its pinned Claude Code CLI, and its entrypoint
 # that drops root to an unprivileged user (HOST_UID) before exec'ing our server. Run it with the claude-docker
 # guardrail flags: run.sh, docker-compose.yml here, or the k8s overlay runtimes/k8s/overlays/claude-docker.
-FROM ghcr.io/schubergphilis/claude-docker:v0.3.3@sha256:03f37a52fe39de0adf82ada52d643b7d8d2864fdcd6d1c7caf630d39cdce8222
+FROM ghcr.io/schubergphilis/claude-docker:v1.3.2@sha256:ba753f4655ad5e3dac45781ea7906dd9fccfb7c184a43d1bae87d58237fdaef9
 
 # Python lives outside /root (claude-docker keeps /root for its masked, per-user state)
 ENV UV_PYTHON_INSTALL_DIR=/opt/uv-python UV_PROJECT_ENVIRONMENT=/app/.venv UV_LINK_MODE=copy
